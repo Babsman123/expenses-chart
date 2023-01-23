@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  hsl(27, 66%, 92%);
+    font-family: 'Red Hat Display', sans-serif; 
+}
+.expenses-container{
+    min-width: 340px;
+    min-height: 50vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+.expenses-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    height: 10vh;
+    width: 100%;
+    background-color: hsl(10, 79%, 65%);
+    padding: 45px 20px;
+}
+.expenses-header .expenses-balance{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+.expenses-header .expenses-balance h1{
+    margin-top: 5px;
+}
+.expenses-header img{
+    width: 20%;
+}
+.expenses-description{
+    min-height: 30h;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.expenses-description .expenses-amount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.expenses-description .expenses-amount .expenses-monthly{
+    display: flex;
+    flex-direction: column;
+}
+.expenses-description .expenses-amount .expenses-monthly h5{
+    font-size: 13px;
+    color: hsl(28, 10%, 53%);
+    opacity: .6;
+    margin-bottom: 5px;
+}
+.expenses-description .expenses-amount .expenses-past-month{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.expenses-description .expenses-amount .expenses-past-month h2{
+    font-size: 15px;
+}
+.expenses-description .expenses-amount .expenses-past-month p{
+    color: hsl(28, 10%, 53%);
+    opacity: .6;    
+    margin-top: 3px;
+}

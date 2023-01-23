@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Fraunces:opsz@9..144&family=Red+Hat+Display&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/DM+Sans">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="expenses-container">
+    <div class="expenses-header">
+      <div class="expenses-balance">
+        <h4>My balance</h4>
+        <h1>$921.48</h1>
+      </div>
+      <img src="./images/logo.svg" alt="logo">
+    </div>
+    <div class="expenses-description">
+      <h3>Spending - Last 7 days</h3>
+      <div>
+        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+        <script>
+          var xValues = ["Mon", "Tue", "Wed", "Thurs", "fri", "Sat", "Sun"];
+          var yValues = [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48];
+          var barColors = ["hsl(10, 79%, 65%)", "hsl(10, 79%, 65%)","hsl(219, 79%, 65%)","hsl(10, 79%, 65%)","hsl(10, 79%, 65%)", "hsl(10, 79%, 65%)", "hsl(10, 79%, 65%)"];
+          
+          new Chart("myChart", {
+            type: "bar",
+            data: {
+              labels: xValues,
+              datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+              }]
+            },
+            options: {
+              legend: {display: false},
+              title: {
+                display: true,
+                text: ""
+              }
+            }
+          });
+          </script>
+      </div>
+  
+      <hr>
+      <div class="expenses-amount">
+        <div class="expenses-monthly">
+          <h5>Total this month</h5>
+          <h2>$478.33</h2>
+        </div>
+        <div class="expenses-past-month">
+          <h2>+2.4%</h2>
+          <p>from last month</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Babsman123">Tunde Adelani</a>.
+  </div>
+</body>
+</html>
